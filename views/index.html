@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="MeConverse">
+<head>
+<title>Just Chat</title>
+<link rel="stylesheet" href="../public/css/style.css" type="text/css" />
+<script type="text/javascript" src="../public/js/libs/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../public/js/libs/angular-1.3.8/angular.js"></script>
+<script type="text/javascript" src="../public/js/app.js"></script>
+<script type="text/javascript" src="../public/js/controllers/loginController.js"></script>
+</head>
+<body>
+<div id="page-wrapper">
+	<div class="header">
+		<center class="logo">Just Chat!</center>
+	</div>
+	<div class="content" ng-controller="loginController">
+		<form id="login-form" ng-submit="formValid ? login() : formValid = true" novalidate >
+			<div class="instr">
+				Type Your Username
+			</div>
+			<div class="name-insert">
+				<div class="name-insert-inner">
+					<input type="text" ng-model="username" name="username" autocomplete="off" autofocus required/>
+				</div>
+			</div>
+			<div class="submit-name">
+				<div class="submit-name-inner">
+					<input type="submit" ng-click="formValid=!!username" value="Get Started" /> 
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="footer">
+	<div class="foot-strip">
+		<div class="copyright-statement">
+			&copy Copyright Practice Act 20xx, DMCA
+		</div>
+		<div class="footer-links">
+			<ul>
+				<li>
+					<a href="#">About</a>
+				</li>
+				<li>
+					<a href="#">contact us</a>
+				</li>
+				<li>
+					<a href="#">Feedback</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

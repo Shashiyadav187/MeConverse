@@ -1,0 +1,182 @@
+@font-face{
+	font-family: computer-font;
+	src: url(./fonts/bitwise/Bitwise.ttf);
+}
+
+*{
+	margin:0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+}
+
+.chatroom-wrap{
+	height: 100%;
+}
+
+.room-header{
+	background-color: #000;
+	color: #fff;
+	height: 8%;
+	width:100%;
+	border-bottom: 1px solid #ccc;
+}
+
+.room-heading{
+	vertical-align: middle;
+	text-align:center;
+	font-family:arial;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.room-content{
+	display:block;
+	height: 91.8%;
+}
+
+.room-chat-left{
+	display: inline-block;
+	width: 75%;
+	height: 100%;
+	border-right: 1px solid #2E59D1;
+}
+
+.room-chat-right{
+	display: inline-block;
+	width:24%;
+	height: 100%;
+	vertical-align:top;
+}
+
+.chat-block{
+	display: block;
+	height:100%;
+	margin-bottom: -70px;
+}
+
+.type-chat{
+	display:block;
+	height: 70px;
+	background-color: #fff;
+	width: 100%;
+}
+
+.all-chats{
+    display: block;
+    height: 84%;
+    overflow: auto;
+    border-bottom: 1px solid #A7A7F2;
+}
+
+.chat{
+	display: block;
+	width: 94%;
+	background-color: #DEF0F7;
+	margin-left: 2%;
+	border-radius: 8px;
+	padding: 10px;
+	margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.chat-info{
+	display: block;
+}
+
+.chat-user-name{
+	display: inline;
+	font-family: computer-font;
+    color: darkmagenta;
+	cursor: pointer;
+}
+.chat-time{
+	display: inline;
+	font-family: arial;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.chat-msg{
+	display: block;
+	margin-top: 7px;
+	font-family: arial;
+    font-size: 14px;
+}
+
+.text-insert{
+	display:inline-block;
+}
+
+.send-text{
+	display:inline-block;
+	vertical-align: top;
+}
+
+.type-chat form{
+	background: #194457;
+    padding: 17.5px;
+    bottom: 0;
+}
+
+.type-chat form input{
+  border: 0;
+  padding: 10px;
+  width: 88%;
+  margin-right: .5%;
+}
+
+.type-chat form button{
+  width: 9%;
+  background: rgb(130, 224, 255);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.online-users{
+	display: block;
+    background-color: #194457;
+	color: rgb(130, 224, 255);
+    width: 104%;
+    height: 50px;
+    line-height: 50px;
+    margin-left: -4px;
+    text-align: center;
+    font-size: 30px;
+    font-family: arial;
+}
+.room-chat-right ul {
+  overflow: auto;
+  height: 91%;
+  width: 102%;
+}
+
+.room-chat-right ul li{
+	display:block;
+	margin: 20px 10px;
+}
+
+.room-chat-right ul li .room-user{
+	display: inline-block;
+	font-family: arial;
+    font-size: 14px;
+	color: #B87561;
+	cursor: pointer;
+}
+
+.room-chat-right ul li .is-online{
+	display: inline-block;
+	float: right;
+	margin-right: 20px;
+	margin-top: 3px;
+}
+
+.is-online .round{
+	display: block;
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    background-color: green;
+}

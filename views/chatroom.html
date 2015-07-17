@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="MeConverse">
+<head>
+<title>Chat Room</title>
+<link rel="stylesheet" href="../public/css/chatroom.css" type="text/css" />
+<script type="text/javascript" src="../public/js/libs/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../public/js/libs/angular-1.3.8/angular.js"></script>
+<script type="text/javascript" src="../public/js/app.js"></script>
+</head>
+<body>
+<div class="chatroom-wrap" ng-controller="chatRoomController">
+	<div class="room-header">
+		<div class="room-heading">
+			Welcome {{user.username}}
+		</div>
+	</div>
+	<div class="room-content">
+		<div class="room-chat-left" ng-controller="chatController">
+			<div class="chat-block">
+				<div class="all-chats">
+					<div class="chat" ng-repeat="">
+						<div class="chat-info">
+							<div class="chat-user-name">{{member.username}}</div>,
+							<div class="chat-time"> {{member.chatTime}}</div>
+						</div>
+						<div class="chat-msg">
+							{{member.chatMsg}}
+						</div>
+					</div>				
+				</div>
+			</div>
+			<div class="type-chat">
+				<form novalidate ng-submit="nonEmpty ? user.sendMsg() : nonEmpty = true">
+					<input ng-model="user.typedMsg" autocomplete='off' />
+					<button type="submit" ng-click="nonEmpty = !!user.typedMsg" >Send</button>
+				</form>
+			</div>
+		</div>
+		<div class="room-chat-right" ng-controller="onlineController">
+			<div class="online-users">
+				Other Members
+			</div>
+			<ul>
+				<li ng-repeat="">
+					<div class="room-user">
+						{{member.username}}
+					</div>
+					<div ng-show="member.isOnline" class="is-online">
+						<div class="round"></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
